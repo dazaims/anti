@@ -17,7 +17,7 @@ local function a(b)
 	return c
 end
 
-local e = game:GetService("ReplicatedStorage").Remotes["Anti-Cheat"]
+local e = game:GetService("ReplicatedStorage")
 local f = e:WaitForChild("CheckChildExists")
 
 local g = {
