@@ -79,11 +79,6 @@ task.wait(1)
 
 game.DescendantAdded:Connect(function(k)
 	if h(k.Name) then return end
-	if k:IsA("Sound") then return end
-	if k:IsA('ParticleEmitter') then return end
-	if k:IsA("Attachment") 
-	if k:IsA("Part") or k:IsA('Folder') or k:IsA('MeshPart') then return end
-	if k.Name == 'OriginalPosition' or k.Name == 'OriginalSize' or k.Name == 'AvatarPartScaleType' or k.Name == 'Rocks' or k.Name =='' then return end
 	local l = f:InvokeServer(k.Parent.Name, k.Name)
 
 	local m = a(k)
