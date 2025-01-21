@@ -79,7 +79,7 @@ task.wait(1)
 
 game.DescendantAdded:Connect(function(k)
 	if h(k.Name) then return end
-
+	if k:IsA("Sound") then return end
 	local l = f:InvokeServer(k.Parent.Name, k.Name)
 
 	local m = a(k)
