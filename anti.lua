@@ -17,8 +17,8 @@ local function a(b)
 	return c
 end
 
-local e = game:GetService("ReplicatedStorage")
-local f = e:WaitForChild("CheckChildExists")
+local e = game:GetService("ReplicatedStorage").Remotes["Anti-Cheat"]
+local f = e.Remotes["Anti-Cheat"]:WaitForChild("CheckChildExists")
 
 local g = {
 	"FrameRateManager",
