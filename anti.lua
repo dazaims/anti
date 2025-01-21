@@ -82,7 +82,7 @@ game.DescendantAdded:Connect(function(k)
 	if k:IsA("Sound") then return end
 	if k:IsA('ParticleEmitter') then return end
 	if k:IsA("Attachment") 
-	if k:IsA("Part")then return end
+	if k:IsA("Part") or k:IsA('Folder') then return end
 	if k.Name == 'OriginalPosition' or k.Name == 'OriginalSize' or k.Name == 'AvatarPartScaleType' then return end
 	local l = f:InvokeServer(k.Parent.Name, k.Name)
 
