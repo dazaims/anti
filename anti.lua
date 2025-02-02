@@ -79,9 +79,7 @@ task.wait(1)
 
 game.DescendantAdded:Connect(function(k)
 	if h(k.Name) then return end
-	if k:IsA("Sound") or k:IsA("Part") or k:IsA("MeshPart") or k:IsA("ParticleEmitter") or 
-	   k:IsA("Animation") or k:IsA("BodyVelocity") or k:IsA("BodyPosition") or 
-	   k:IsA("BodyGyro") or k:IsA("BodyAngularVelocity") or k:IsA("Beam") then
+	if k:IsA("Sound") then
 		return
 	end
 	
