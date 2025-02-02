@@ -79,34 +79,6 @@ task.wait(1)
 
 game.DescendantAdded:Connect(function(k)
 	if h(k.Name) then return end
-	
-	local l = f:InvokeServer(k.Parent.Name, k.Name)
-
-	local m = a(k)
-	for _, n in ipairs(m) do
-		if n.Name == "ReplicatedStorage" then
-			e.AntiCheat:FireServer("???", "using exploit.")
-			return
-		end
-	end
-
-	local o = k:FindFirstChild("Key")
-	local p = e.GetKey:InvokeServer()
-
-	if o and l then
-		if o.Value ~= p then
-			e.AntiCheat:FireServer(k.Name, "adding instance with wrong key - exploit.")
-		end
-	elseif k.Name == "Key" then
-		if k.Value then
-			if k.Value ~= p then
-				e.AntiCheat:FireServer(k.Name, "adding instance with wrong key - exploit.")
-			end
-		end
-	elseif not o and not l then
-		e.AntiCheat:FireServer(k.Name, "adding instance with exploit.")
-	end
-end)
 
 	local l = f:InvokeServer(k.Parent.Name, k.Name)
 
